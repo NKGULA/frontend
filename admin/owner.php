@@ -1,5 +1,5 @@
 <?php // src by SRT X CHEATS. Copy right SRT X CHEATS
-$pageTitle = 'SRT X CHEATS — BALANCE LOAD';
+$pageTitle = 'NK X CHEATS — BALANCE LOAD';
 require_once __DIR__ . '/../includes/head.php';
 require_once __DIR__ . '/../includes/nav.php';
 ?>
