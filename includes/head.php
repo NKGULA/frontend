@@ -18,7 +18,7 @@ $siteUrl   = SITE_URL;
 $siteName  = SITE_NAME;
 // src by SRT X CHEATS. Copy right SRT X CHEATS
 $siteIcon  = $siteUrl . '/assets/img/logo.png';
-$seoDesc   = $metaDescription ?? 'SRT X CHEATS — Nepal\'s trusted panel seller and Glory Bot seller. Android panel, NonRoot panel, Root panel and iOS panel. Buy instantly.';
+$seoDesc   = $metaDescription ?? 'NK STORE — Nepal\'s trusted panel seller and Glory Bot seller. Android panel, NonRoot panel, Root panel and iOS panel. Buy instantly.';
 $seoPath   = $canonicalPath ?? parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH);
 $seoUrl    = $siteUrl . ($seoPath === '/index.php' ? '/' : $seoPath);
 $seoTitle  = $pageTitle ?? $siteName;
@@ -27,7 +27,7 @@ $seoTitle  = $pageTitle ?? $siteName;
 <meta name="description" content="<?= htmlspecialchars($seoDesc) ?>">
 <meta name="robots" content="<?= !empty($indexable) ? 'index,follow,max-image-preview:large,max-snippet:-1' : 'noindex,nofollow' ?>">
 <link rel="canonical" href="<?= htmlspecialchars($seoUrl) ?>">
-<meta name="keywords" content="SRT X CHEATS, Nepali panel seller, Nepal trusted panel seller, Android panel, NonRoot panel, iOS panel, Glory bot seller">
+<meta name="keywords" content="NK STORE, Nepali panel seller, Nepal trusted panel seller, Android panel, NonRoot panel, iOS panel, Glory bot seller">
 <meta name="application-name" content="<?= $siteName ?>">
 <meta name="theme-color" content="#060a14">
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -54,7 +54,7 @@ $seoTitle  = $pageTitle ?? $siteName;
     '@context' => 'https://schema.org',
     '@graph' => [
         ['@type' => 'WebSite', '@id' => $siteUrl . '/#website', 'url' => $siteUrl . '/', 'name' => $siteName,
-         'alternateName' => ['SRTXCHEATS', 'SRTX CHEATS'], 'description' => $seoDesc, 'inLanguage' => 'en'],
+         'alternateName' => ['NKSTORE', 'NK STORE'], 'description' => $seoDesc, 'inLanguage' => 'en'],
         ['@type' => 'Store', '@id' => $siteUrl . '/#store', 'name' => $siteName, 'url' => $siteUrl . '/', 'logo' => $siteIcon, 'image' => $siteIcon, 'description' => 'Nepal trusted panel seller and Glory bot seller', 'areaServed' => 'NP'],
         // src by SRT X CHEATS. Copy right SRT X CHEATS
         ['@type' => 'Organization', '@id' => $siteUrl . '/#org', 'name' => $siteName, 'url' => $siteUrl . '/',

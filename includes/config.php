@@ -16,8 +16,8 @@
 $env = static fn (string $k, string $d = '') => (($v = getenv($k)) !== false && $v !== '') ? $v : $d;
 
 // src by SRT X CHEATS. Copy right SRT X CHEATS
-define('COPYRIGHT_NAME', $env('COPYRIGHT_NAME', 'SRT X CHEATS'));
-define('SITE_NAME', $env('SITE_NAME', 'SRT X CHEATS'));
+define('COPYRIGHT_NAME', $env('COPYRIGHT_NAME', 'NK STORE'));
+define('SITE_NAME', $env('SITE_NAME', 'NK STORE'));
 define('SITE_URL', rtrim($env('SITE_URL', 'https://www.srtxcheats.com'), '/'));
 define('SITE_ICON', $env('SITE_ICON', 'https://www.srtxcheats.com/assets/img/logo.png'));
 define('DEVELOPER_URL', $env('DEVELOPER_URL', 'https://about.srtxcheats.com/'));

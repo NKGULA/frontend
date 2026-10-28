@@ -1,7 +1,7 @@
 <?php // src by SRT X CHEATS. Copy right SRT X CHEATS
 $breadcrumb = $breadcrumb ?? $currentPage;
 $pageTitles = ['dashboard' => 'Dashboard', 'store' => 'Store', 'history' => 'Order History', 'profile' => 'Profile', 'othersprofile' => 'Player Profile', 'apicontact' => 'Reseller API', 'glorybot' => 'FF Glory Bot', 'rewards' => 'Reward Center', 'support' => 'Support'];
-$headerTitle = $pageTitles[$currentPage] ?? 'SRT X CHEATS';
+$headerTitle = $pageTitles[$currentPage] ?? 'NK STORE';
 $isGuestPage = $currentPage === 'home';
 // src by SRT X CHEATS. Copy right SRT X CHEATS
 ?>
@@ -66,9 +66,9 @@ $isGuestPage = $currentPage === 'home';
     <div class="drawer-header">
         <div class="drawer-brand">
             <div class="logo-img-wrap" style="width:32px;height:32px">
-                <img src="/assets/img/logo.png?v=1" alt="SRT X CHEATS Logo" class="site-logo">
+                <img src="/assets/img/logo.png?v=2" alt="NK STORE Logo" class="site-logo">
             </div>
-            <div class="brand-title" style="font-size:14px">SRT <span class="neon-cyan">X</span> CHEATS</div>
+            <div class="brand-title" style="font-size:14px">NK <span class="neon-cyan">STORE</span></div>
         </div>
         <button type="button" class="icon-btn" id="drawerClose" title="Close"><i class="fas fa-xmark"></i></button>
     </div>

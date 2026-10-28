@@ -7,7 +7,7 @@
             <i class="fas fa-xmark"></i>
         </button>
         <div class="prompt-header" style="justify-content:center">
-            <i class="fas fa-hand-sparkles" style="color:var(--neon-amber)"></i> Welcome to SRT X CHEATS
+            <i class="fas fa-hand-sparkles" style="color:var(--neon-amber)"></i> Welcome to NK STORE
         </div>
         <div style="font-size:13.5px;line-height:1.7;color:var(--text-secondary);margin:6px 0 18px">
             First watch all guide videos, then use the admin panel.
