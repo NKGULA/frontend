@@ -34,7 +34,7 @@
 
   var PAGE = window.SRT_FX_PAGE || '';
   // src by SRT X CHEATS. Copy right SRT X CHEATS
-  var LOGO = '/assets/img/logo.png?v=1';
+  var LOGO = '/assets/img/logo.png?v=2';
 
   var GENERIC_STEPS = [['fa-shield-halved', 'Securing connection'], ['fa-database', 'Loading your data'], ['fa-circle-check', 'All set']];
   var PAGES = {
@@ -49,7 +49,7 @@
     apicontact:    { icon: 'fa-plug', title: 'Reseller API', steps: GENERIC_STEPS, wTitle: 'Reseller API', wSub: 'Your tools are ready' },
     othersprofile: { icon: 'fa-id-card', title: 'Player Profile', steps: GENERIC_STEPS, wTitle: 'Player Profile', wSub: 'Loaded' }
   };
-  var CFG = PAGES[PAGE] || { icon: 'fa-bolt', title: 'SRT X CHEATS', steps: GENERIC_STEPS, wTitle: 'Welcome', wSub: 'Everything is ready' };
+  var CFG = PAGES[PAGE] || { icon: 'fa-bolt', title: 'NK STORE', steps: GENERIC_STEPS, wTitle: 'Welcome', wSub: 'Everything is ready' };
 
   // src by SRT X CHEATS. Copy right SRT X CHEATS
   function showWelcome() {
