@@ -1,5 +1,5 @@
 <?php // src by SRT X CHEATS. Copy right SRT X CHEATS
-$pageTitle = 'NK X CHEATS — BALANCE LOAD';
+$pageTitle = 'NK STORE — BALANCE LOAD';
 require_once __DIR__ . '/../includes/head.php';
 require_once __DIR__ . '/../includes/nav.php';
 ?>
@@ -103,7 +103,7 @@ require_once __DIR__ . '/../includes/nav.php';
     <div><div class="amt" id="qrAmt">NRP 0</div><div class="hint">Pay exactly this amount, then tap “I have paid”.</div></div>
     <button type="button" class="qr-close" id="qrClose" aria-label="Close"><i class="fas fa-xmark"></i></button>
   </div>
-  <div class="qr-img-wrap"><img src="/assets/img/srtx-pay-qr.jpg?v=1" alt="Scan and pay"></div>
+  <div class="qr-img-wrap"><img src="/assets/img/nk-pay-qr.jpg?v=2" alt="Scan and pay"></div>
   <div class="qr-bottom"><button type="button" class="btn btn-solid" id="qrPaidBtn" style="width:100%"><i class="fas fa-check"></i> I have paid</button></div>
 </div>
 
