@@ -1,5 +1,5 @@
 <?php // src by SRT X CHEATS. Copy right SRT X CHEATS
-$pageTitle = 'Player Profile — SRT X CHEATS';
+$pageTitle = 'Player Profile — NK STORE';
 $currentPage = 'othersprofile';
 require __DIR__ . '/includes/head.php';
 require __DIR__ . '/includes/nav.php';

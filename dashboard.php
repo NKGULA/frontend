@@ -1,5 +1,5 @@
 <?php // src by SRT X CHEATS. Copy right SRT X CHEATS
-$pageTitle = 'Dashboard — SRT X CHEATS';
+$pageTitle = 'Dashboard — NK STORE';
 $currentPage = 'dashboard';
 require __DIR__ . '/includes/head.php';
 require __DIR__ . '/includes/nav.php';
@@ -341,7 +341,7 @@ function applyBalance(d) {
         statusEl.textContent = d.requestStatus || 'Active';
         statusEl.style.color = d.requestStatus === 'Active' ? 'var(--neon-green)' :
                                d.requestStatus === 'Pending' ? 'var(--neon-amber)' : 'var(--neon-red)';
-        document.getElementById('noticeText').textContent = d.adminMessage || 'Welcome to SRT X CHEATS.';
+        document.getElementById('noticeText').textContent = d.adminMessage || 'Welcome to NK STORE.';
         // src by SRT X CHEATS. Copy right SRT X CHEATS
         const drawerBal = document.getElementById('drawerBalance');
         if (drawerBal) drawerBal.textContent = 'NRP ' + d.balance;

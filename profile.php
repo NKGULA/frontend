@@ -1,5 +1,5 @@
 <?php // src by SRT X CHEATS. Copy right SRT X CHEATS
-$pageTitle = 'Profile — SRT X CHEATS';
+$pageTitle = 'Profile — NK STORE';
 $currentPage = 'profile';
 require __DIR__ . '/includes/head.php';
 require __DIR__ . '/includes/nav.php';
@@ -24,8 +24,8 @@ require __DIR__ . '/includes/nav.php';
                 <div class="field-hint lock-hint" id="hintName" data-field="name" data-every="7 days"></div></div>
             <div class="field"><label><i class="fab fa-whatsapp"></i> Phone / WhatsApp Number</label><input type="text" id="profPhone" placeholder="98xxxxxxxx" maxlength="30">
                 <div class="field-hint lock-hint" id="hintPhone" data-field="phone" data-every="2 days"></div></div>
-            <div class="field"><label><i class="fab fa-tiktok"></i> TikTok Name</label><input type="text" id="profTiktokName" placeholder="SRT X CHEATS" maxlength="60"></div>
-            <div class="field"><label><i class="fab fa-tiktok"></i> TikTok Username</label><input type="text" id="profTiktokUser" placeholder="@srtxcheats" maxlength="25" autocapitalize="none"></div>
+            <div class="field"><label><i class="fab fa-tiktok"></i> TikTok Name</label><input type="text" id="profTiktokName" placeholder="NK STORE" maxlength="60"></div>
+            <div class="field"><label><i class="fab fa-tiktok"></i> TikTok Username</label><input type="text" id="profTiktokUser" placeholder="@nkstore" maxlength="25" autocapitalize="none"></div>
             <div class="field hidden" id="panelLinkField"><label><i class="fas fa-link"></i> Your Own Panel Link <span class="dim">(reseller)</span></label><input type="text" id="profPanelLink" placeholder="xxxxxxx.com" maxlength="200" autocapitalize="none">
                 <div class="field-hint lock-hint" id="hintPanel" data-field="panelLink" data-every="1 day"></div></div>
             <button class="btn btn-solid" id="saveProfile" style="margin-bottom:14px;position:relative">

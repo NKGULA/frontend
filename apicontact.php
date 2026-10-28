@@ -1,5 +1,5 @@
 <?php // src by SRT X CHEATS. Copy right SRT X CHEATS
-$pageTitle = 'Reseller API — SRT X CHEATS';
+$pageTitle = 'Reseller API — NK STORE';
 $currentPage = 'apicontact';
 require __DIR__ . '/includes/head.php';
 require __DIR__ . '/includes/nav.php';

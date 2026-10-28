@@ -1,6 +1,6 @@
 <?php // src by SRT X CHEATS. Copy right SRT X CHEATS
 header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
-$pageTitle = 'FF Glory Bot — SRT X CHEATS';
+$pageTitle = 'FF Glory Bot — NK STORE';
 $currentPage = 'glorybot';
 require __DIR__ . '/includes/head.php';
 // src by SRT X CHEATS. Copy right SRT X CHEATS
@@ -1036,8 +1036,8 @@ function hhmm(v) {
 const stamp = (t) => new Date(t || Date.now()).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit', second: '2-digit' });
 const has = (v) => v !== undefined && v !== null && v !== '';
 
-const LOGO_URL = '/assets/img/logo.png?v=1';
-const logoImg = (cls) => `<img class="${cls}" src="${LOGO_URL}" alt="SRT X CHEATS" loading="lazy" decoding="async">`;
+const LOGO_URL = '/assets/img/logo.png?v=2';
+const logoImg = (cls) => `<img class="${cls}" src="${LOGO_URL}" alt="NK STORE" loading="lazy" decoding="async">`;
 // src by SRT X CHEATS. Copy right SRT X CHEATS
 function ago(t) {
     const ms = Date.now() - new Date(t).getTime();
@@ -1085,7 +1085,7 @@ function groupCard(g, anim) {
         <div class="gc-grid">
             <div class="gc-cell gc-box"><div class="k"><i class="fas fa-location-dot"></i> Region</div><div class="v">${esc(reg.code || g.region || '—')}</div></div>
             <div class="gc-cell gc-box"><div class="k"><i class="fas fa-user-group"></i> Accounts</div><div class="v">${bots}</div></div>
-            <div class="gc-cell gc-box brand"><div class="k">${logoImg('gc-logo')} SRT X CHEATS</div><div class="v">ENJOY</div></div>
+            <div class="gc-cell gc-box brand"><div class="k">${logoImg('gc-logo')} NK STORE</div><div class="v">ENJOY</div></div>
             <div class="gc-cell gc-box"><div class="k"><i class="fas fa-bolt"></i> Last match</div><div class="v">${esc(lastMatch)}</div></div>
         </div>
 

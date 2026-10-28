@@ -1,5 +1,5 @@
 <?php // src by SRT X CHEATS. Copy right SRT X CHEATS
-$pageTitle = 'Get Updates — SRT X CHEATS';
+$pageTitle = 'Get Updates — NK STORE';
 $currentPage = 'store';
 $fxLoaderOverride = 'none';
 require __DIR__ . '/includes/head.php';

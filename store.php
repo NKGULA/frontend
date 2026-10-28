@@ -1,6 +1,6 @@
 <?php // src by SRT X CHEATS. Copy right SRT X CHEATS
-$pageTitle = 'Store — SRT X CHEATS';
-$metaDescription = 'SRT X CHEATS store: panels for iOS, Android Root/Non-Root and PC.';
+$pageTitle = 'Store — NK STORE';
+$metaDescription = 'NK STORE store: panels for iOS, Android Root/Non-Root and PC.';
 $indexable = true;
 $currentPage = 'store';
 // src by SRT X CHEATS. Copy right SRT X CHEATS
@@ -293,7 +293,7 @@ require __DIR__ . '/includes/nav.php';
 
 <div id="helpModal" class="modal-overlay hidden">
     <div class="panel" style="max-width:400px;width:100%">
-        <div class="prompt-header"><i class="fas fa-headset"></i> WELCOME TO SRT SUPPORT</div>
+        <div class="prompt-header"><i class="fas fa-headset"></i> WELCOME TO NK STORE SUPPORT</div>
         <div class="support-ticket">
             <div class="ticket-row"><span class="k">Token</span><span class="eq">=</span><span class="v" id="supToken">—</span></div>
             <div class="ticket-row"><span class="k">UID</span><span class="eq">=</span><span class="v" id="supUid">—</span></div>

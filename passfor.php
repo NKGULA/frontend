@@ -1,5 +1,5 @@
 <?php // src by SRT X CHEATS. Copy right SRT X CHEATS
-$pageTitle = 'Forgot Password — SRT X CHEATS';
+$pageTitle = 'Forgot Password — NK STORE';
 $bodyClass = 'auth-body forgot-body';
 require __DIR__ . '/includes/head.php';
 ?>
@@ -8,9 +8,9 @@ require __DIR__ . '/includes/head.php';
 <div class="forgot-shell">
   <div class="auth-brand">
     <div class="logo-img-wrap" style="margin:0 auto">
-      <img src="/assets/img/logo.png?v=1" alt="Logo" class="site-logo">
+      <img src="/assets/img/logo.png?v=2" alt="Logo" class="site-logo">
     </div>
-    <div class="auth-brand-title">SRT <span class="neon-cyan">X</span> CHEATS</div>
+    <div class="auth-brand-title">NK <span class="neon-cyan">STORE</span></div>
     <div class="auth-brand-sub">Password Recovery</div>
   </div>
 

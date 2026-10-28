@@ -1,5 +1,5 @@
 <?php // src by SRT X CHEATS. Copy right SRT X CHEATS
-$pageTitle = 'Login — SRT X CHEATS';
+$pageTitle = 'Login — NK STORE';
 $bodyClass = 'auth-body';
 require __DIR__ . '/includes/head.php';
 ?>
@@ -37,9 +37,9 @@ require __DIR__ . '/includes/head.php';
 <div class="auth-shell hidden" id="authShell">
     <div class="auth-brand">
         <div class="logo-img-wrap" style="margin:0 auto">
-            <img src="/assets/img/logo.png?v=1" alt="Logo" class="site-logo">
+            <img src="/assets/img/logo.png?v=2" alt="Logo" class="site-logo">
         </div>
-        <div class="auth-brand-title">SRT <span class="neon-cyan">X</span> CHEATS</div>
+        <div class="auth-brand-title">NK <span class="neon-cyan">STORE</span></div>
         <div class="auth-brand-sub" style="display:flex;align-items:center;justify-content:center;gap:8px">
             <span>Panels Hub</span>
             <button type="button" class="policy-info-btn" onclick="window.__openPolicyModal('readonly')" title="Terms &amp; Policy" aria-label="View Terms &amp; Policy">!</button>
@@ -88,11 +88,11 @@ require __DIR__ . '/includes/head.php';
         </div>
         <div class="field">
             <label><i class="fab fa-tiktok"></i> TikTok Name</label>
-            <input type="text" id="regTiktokName" placeholder="SRT X CHEATS" autocomplete="off" maxlength="60">
+            <input type="text" id="regTiktokName" placeholder="NK STORE" autocomplete="off" maxlength="60">
         </div>
         <div class="field">
             <label><i class="fab fa-tiktok"></i> TikTok Username</label>
-            <input type="text" id="regTiktokUser" placeholder="@srtxcheats" autocomplete="off" maxlength="25">
+            <input type="text" id="regTiktokUser" placeholder="@nkstore" autocomplete="off" maxlength="25">
         </div>
         <div class="field">
             <label><i class="fas fa-envelope"></i> Email</label>
@@ -220,7 +220,7 @@ document.getElementById('signupBtn').onclick = async () => {
     const passConfirm = document.getElementById('regPassConfirm').value;
     if (!name || !phone || !tiktokName || !tiktokUser || !email || !pass || !passConfirm) return toast('Fill all fields', 'error');
     // src by SRT X CHEATS. Copy right SRT X CHEATS
-    if (!/^@?[A-Za-z0-9._]{2,24}$/.test(tiktokUser)) return toast('TikTok username: letters, numbers, dots and underscores only (e.g. @srtxcheats)', 'error');
+    if (!/^@?[A-Za-z0-9._]{2,24}$/.test(tiktokUser)) return toast('TikTok username: letters, numbers, dots and underscores only (e.g. @nkstore)', 'error');
     if (pass.length < 6) return toast('Password must be at least 6 characters', 'error');
     if (pass !== passConfirm) return toast('Passwords do not match', 'error');
     const btn = document.getElementById('signupBtn');

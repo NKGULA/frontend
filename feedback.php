@@ -1,5 +1,5 @@
 <?php // src by SRT X CHEATS. Copy right SRT X CHEATS
-$pageTitle = 'Customer Feedback — SRT X CHEATS';
+$pageTitle = 'Customer Feedback — NK STORE';
 $currentPage = 'feedback';
 require __DIR__ . '/includes/head.php';
 require __DIR__ . '/includes/nav.php';
