@@ -1,7 +1,7 @@
 // src by SRT X CHEATS. Copy right SRT X CHEATS
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js';
 import {
-  initializeAuth, browserSessionPersistence, browserPopupRedirectResolver, onAuthStateChanged, signOut,
+  initializeAuth, browserSessionPersistence, browserLocalPersistence, setPersistence, browserPopupRedirectResolver, onAuthStateChanged, signOut,
   signInWithEmailAndPassword, createUserWithEmailAndPassword,
   // src by SRT X CHEATS. Copy right SRT X CHEATS
   GoogleAuthProvider, signInWithPopup, sendPasswordResetEmail,
@@ -11,11 +11,22 @@ import {
 
 // src by SRT X CHEATS. Copy right SRT X CHEATS
 export const app = initializeApp(window.FIREBASE_CONFIG);
-// Session-only login: closing the tab/browser logs the user out; nothing persists in localStorage/IndexedDB
+// AUTO LOGIN: by default users stay signed in after closing the browser (browserLocalPersistence).
+// The login page has a "Keep me signed in" checkbox; unticked = session-only (tab/browser close logs out).
+// The choice is stored in localStorage ('srtx_remember') so Google redirect / page reloads keep following it.
+// Logout (doLogout) clears everything, which also resets the choice to the default (stay signed in).
+const REMEMBER_KEY = 'srtx_remember';
+const rememberOn = () => { try { return localStorage.getItem(REMEMBER_KEY) !== '0'; } catch (_) { return true; } };
+const PERSIST = rememberOn() ? [browserLocalPersistence, browserSessionPersistence] : [browserSessionPersistence, browserLocalPersistence];
 // The popup/redirect resolver makes Firebase load an extra auth iframe + gapi on EVERY page (slow on phones).
 // Only the login/home pages sign in with Google, so only they get it.
 const NEEDS_POPUP = /^\/(?:(?:login|home|index)(?:\.php)?)?$/.test(location.pathname);
-export const auth = initializeAuth(app, NEEDS_POPUP ? { persistence: browserSessionPersistence, popupRedirectResolver: browserPopupRedirectResolver } : { persistence: browserSessionPersistence });
+export const auth = initializeAuth(app, NEEDS_POPUP ? { persistence: PERSIST, popupRedirectResolver: browserPopupRedirectResolver } : { persistence: PERSIST });
+// Call BEFORE signing in. on=true -> stay signed in (auto login), on=false -> session only.
+export async function setRemember(on) {
+  try { localStorage.setItem(REMEMBER_KEY, on ? '1' : '0'); } catch (_) {}
+  try { await setPersistence(auth, on ? browserLocalPersistence : browserSessionPersistence); } catch (e) { console.warn('[auth] setPersistence failed', e); }
+}
 export const googleProvider = new GoogleAuthProvider();
 export { onAuthStateChanged, signOut, signInWithEmailAndPassword, createUserWithEmailAndPassword,
   signInWithPopup, sendPasswordResetEmail, EmailAuthProvider, reauthenticateWithCredential, updatePassword,
