@@ -259,7 +259,7 @@ require __DIR__ . '/includes/nav.php';
 
 <script type="module">
 // src by SRT X CHEATS. Copy right SRT X CHEATS
-import { requireAuth, backendFetch, toast, fmtDate, esc } from '/assets/js/app.js?v=20261025-4';
+import { requireAuth, backendFetch, toast, fmtDate, esc } from '/assets/js/app.js?v=20261112-1';
 
 // src by SRT X CHEATS. Copy right SRT X CHEATS
 const ENDPOINT_PATH = '/api/reseller/v1';
@@ -282,7 +282,7 @@ function productsAsText(groups) {
     // src by SRT X CHEATS. Copy right SRT X CHEATS
     return groups.map((g) =>
         `${g.name} (PID: ${g.pid})\n` + g.durations.map((d) =>
-            `  - ${d.duration} | NRP ${d.price}` + (d.status !== 'available' ? ` | ${d.status}` : '') + (d.requiresAndroidId ? ' | android_id required' : '')
+            `  - ${d.duration} | NRP ${d.price}` + (d.status !== 'available' ? ` | ${d.status}` : '') + (d.stock != null ? ` | ${d.stock} in stock` : '') + (d.requiresAndroidId ? ' | android_id required' : '')
         ).join('\n')
     ).join('\n\n');
 // src by SRT X CHEATS. Copy right SRT X CHEATS
@@ -476,7 +476,7 @@ function renderTable() {
                     <button type="button" class="api-dur ${d.status === 'out_of_stock' ? 'out' : d.status === 'maintenance' ? 'maint' : ''}"
                             data-copy="${esc(d.duration)}" data-msg="Duration copied">
                         ${esc(d.duration)}${d.requiresAndroidId ? ' <span class="api-mini-badge">DEVICE</span>' : ''}
-                        <small>NRP ${esc(d.price)} &middot; ${d.status === 'available' ? 'Available' : d.status === 'out_of_stock' ? 'Out of stock' : 'Maintenance'}</small>
+                        <small>NRP ${esc(d.price)} &middot; ${d.status === 'available' ? 'Available' + (d.stock != null ? ' &middot; ' + esc(d.stock) + ' in stock' : '') : d.status === 'out_of_stock' ? 'Out of stock' : 'Maintenance'}</small>
                     </button>`).join('')}
                 </div>
             </div>

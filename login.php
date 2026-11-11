@@ -62,6 +62,10 @@ require __DIR__ . '/includes/head.php';
             <label><i class="fas fa-lock"></i> Password</label>
             <input type="password" id="loginPass" placeholder="••••••••" autocomplete="current-password">
         </div>
+        <label style="display:flex;align-items:center;gap:8px;font-size:12px;color:var(--text-secondary);margin:0 0 12px;cursor:pointer;user-select:none">
+            <input type="checkbox" id="keepSignedIn" checked style="width:auto;margin:0;flex:none">
+            <span><i class="fas fa-bolt"></i> Keep me signed in (auto login)</span>
+        </label>
         <button class="btn btn-solid" id="loginBtn" style="margin-bottom:10px"><i class="fas fa-arrow-right-to-bracket"></i> Login</button>
 
         <div class="auth-divider">or</div>
@@ -137,11 +141,11 @@ body.auth-body{flex-direction:column}
 </style>
 <script type="module">
 import {
-    auth, checkAuthOnce, backendFetch, toast, setButtonLoading, enableTilt,
+    auth, setRemember, checkAuthOnce, backendFetch, toast, setButtonLoading, enableTilt,
     // src by SRT X CHEATS. Copy right SRT X CHEATS
     googleProvider, signInWithPopup, signInWithEmailAndPassword,
     createUserWithEmailAndPassword, sendPasswordResetEmail, getAdditionalUserInfo,
-} from '/assets/js/app.js?v=20261025-4';
+} from '/assets/js/app.js?v=20261112-1';
 // same Firebase module URL as app.js, so this is the very same instance (no app.js change = no cache problems)
 import { onAuthStateChanged, signInWithRedirect, getRedirectResult } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js';
 
@@ -198,6 +202,7 @@ document.getElementById('loginBtn').onclick = async () => {
     if (!navigator.onLine) return showAuthError('You are offline. Please check your internet connection and try again.');
     setButtonLoading(btn, true);
     try {
+        await setRemember($('keepSignedIn').checked);
         await withSlowGuard(signInWithEmailAndPassword(auth, email, pass), 'login');
         await afterAuth();
     // src by SRT X CHEATS. Copy right SRT X CHEATS
@@ -229,6 +234,7 @@ document.getElementById('signupBtn').onclick = async () => {
     if (!navigator.onLine) return showAuthError('You are offline. Please check your internet connection and try again.');
     setButtonLoading(btn, true);
     try {
+        await setRemember($('keepSignedIn').checked);
         await withSlowGuard(createUserWithEmailAndPassword(auth, email, pass), 'signup');
         await afterAuth({ name, phone, tiktokName, tiktokUser });
     } catch (e) {
@@ -328,6 +334,7 @@ $('googleBtn').onclick = async () => {
     const token = ++busyToken;
     busy.show('Connecting to Google…', 'Choose your account in the Google window.');
     try {
+        await setRemember($('keepSignedIn').checked);
         const result = await signInWithPopup(auth, googleProvider);
         if (token !== busyToken) return;                          // user cancelled meanwhile
         await finishGoogle(result.user, !!getAdditionalUserInfo(result)?.isNewUser);

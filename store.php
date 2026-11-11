@@ -657,7 +657,7 @@ import {
     requireAuth, backendFetch, toast, esc, getAuthToken, enableTilt,
     // src by SRT X CHEATS. Copy right SRT X CHEATS
     getData, refreshData, cachePeek, cacheInvalidate, applyBalanceChange, recordPurchase,
-} from '/assets/js/app.js?v=20261025-4';
+} from '/assets/js/app.js?v=20261112-1';
 
 window.openModal = (id) => document.getElementById(id)?.classList.remove('hidden');
 window.closeModal = (id) => document.getElementById(id)?.classList.add('hidden');
@@ -1131,7 +1131,7 @@ function planRowsHtml(items, gi) {
         const down = isMaintenanceProduct(it);
         const off = !planAvailable(it);
         const sel = firstOk && it.sku === firstOk.sku;
-        const badge = off ? (down ? 'Maintenance' : 'Sold out') : '';
+        const badge = off ? (down ? 'Maintenance' : 'Sold out') : (it.stockMode && Number(it.stock) > 0 ? `${Number(it.stock)} left` : '');
         return `
         <label class="pm2-opt${off ? ' off' : ''}" data-no-busy>
             <input type="radio" name="planOpt" value="${esc(it.sku)}" ${off ? 'disabled' : ''} ${sel ? 'checked' : ''}>
