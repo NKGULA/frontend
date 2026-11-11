@@ -27,7 +27,7 @@ $proCard = !empty($proCard);
 <script type="module">
 // src by SRT X CHEATS. Copy right SRT X CHEATS
 // PRO RESELLER unlocks automatically: 10+ keys bought AND ONE new deposit of NRP 3500+ (no form, no approval).
-import { cachePeek } from '/assets/js/app.js?v=20261025-3';
+import { cachePeek } from '/assets/js/app.js?v=20261112-1';
 
 const $ = (id) => document.getElementById(id);
 const nrp = (n) => 'NRP ' + Number(n || 0).toLocaleString('en-US');
